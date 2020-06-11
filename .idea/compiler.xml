@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="myProjectcontroller" />
         <module name="myProjectdao" />
+        <module name="myProjectcontroller" />
         <module name="myProjectservice" />
         <module name="myProjectdomain" />
         <module name="myProjectutil" />

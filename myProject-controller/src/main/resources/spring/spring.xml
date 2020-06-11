@@ -13,10 +13,8 @@
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!--    serivce,dao注解扫描 -->
-    <!--    忽略controller-->
-    <context:component-scan base-package="com.dream">
-        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-    </context:component-scan>
+    <context:component-scan base-package="com.dreamer.dao"/>
+    <context:component-scan base-package="com.dreamer.service"/>
 
 
     <!--Spring整合MyBatis框架-->
@@ -36,14 +34,13 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations"
-                  value="classpath:mappers/*.xml"/>
-
+                  value="classpath:mapper/*.xml"/>
     </bean>
 
 
     <!--配置Dao接口所在包-->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.dream.dao"/>
+        <property name="basePackage" value="com.dreamer.dao"/>
         <!--        根目录-->
         <!--        <property name="markerInterface" value="com.dream.parent.SuperDao" />-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
@@ -73,7 +70,7 @@
 
     <!--配置AOP增强-->
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.dream.*.service.impl.*ServiceImpl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.dreamer.*.service.impl.*ServiceImpl.*(..))"/>
     </aop:config>
 
 </beans>
