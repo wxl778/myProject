@@ -12,12 +12,12 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <!--    serivce,dao注解扫描 -->
     <!--    不忽略controller-->
-    <context:component-scan base-package="com.dream"/>
+    <context:component-scan base-package="com.dreamer.controller"></context:component-scan>
 
 
     <!--配置的视图解析器对象-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/views"/>
+        <property name="prefix" value="/views/"/>
         <property name="suffix" value=".jsp"/>
         <property name="contentType" value="text/html;charset=UTF-8"/>
         <property name="cache" value="true"></property>
@@ -32,18 +32,18 @@
     <!--开启SpringMVC注解的支持-->
     <!--    解决数据传输乱码-->
     <mvc:annotation-driven>
-        <mvc:message-converters register-defaults="true">
-            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
-                <constructor-arg value="UTF-8"/>
-            </bean>
-            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-                <property name="objectMapper">
-                    <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
-                        <property name="failOnEmptyBeans" value="false"/>
-                    </bean>
-                </property>
-            </bean>
-        </mvc:message-converters>
+<!--        <mvc:message-converters register-defaults="true">-->
+<!--            <bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+<!--                <constructor-arg value="UTF-8"/>-->
+<!--            </bean>-->
+<!--            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+<!--                <property name="objectMapper">-->
+<!--                    <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">-->
+<!--                        <property name="failOnEmptyBeans" value="false"/>-->
+<!--                    </bean>-->
+<!--                </property>-->
+<!--            </bean>-->
+<!--        </mvc:message-converters>-->
     </mvc:annotation-driven>
 
 

@@ -10,16 +10,12 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>myProject-dao</module>
-        <module>myProject-service</module>
         <module>myProject-domain</module>
         <module>myProject-controller</module>
         <module>myProject-util</module>
+        <module>myProject-service</module>
     </modules>
 
-    <!--    <groupId>com.itheima.heima_ssm</groupId>-->
-<!--    <artifactId>heima_ssm</artifactId>-->
-<!--    <packaging>pom</packaging>-->
-<!--    <version>1.0-SNAPSHOT</version>-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -146,6 +142,14 @@
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+            <scope>compile</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
