@@ -8,13 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="myProject-dao" />
         <module name="myProjectdomain" />
-        <module name="myProject-domain" />
-        <module name="myProjectutil" />
-        <module name="myProject-service" />
-        <module name="myProject-util" />
-        <module name="myProjectdao" />
-        <module name="myProject-controller" />
         <module name="myProjectcontroller" />
+        <module name="myProject-domain" />
+        <module name="myProject-controller" />
+        <module name="myProject-util" />
+        <module name="myProject-service" />
+        <module name="myProjectdao" />
+        <module name="myProjectutil" />
       </profile>
     </annotationProcessing>
   </component>
