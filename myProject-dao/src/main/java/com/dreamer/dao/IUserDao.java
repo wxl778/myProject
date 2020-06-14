@@ -1,16 +1,18 @@
 package com.dreamer.dao;
 
 import com.dreamer.domain.IUser;
-import org.springframework.stereotype.Repository;
 
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
-@Repository("iUserDao")
+
 public interface IUserDao {
+
     /*
-    查询
+     * 查询
      */
+//    @Select("select * from iuser")
     List<IUser> findAll();
 
     IUser findById(String id);
@@ -18,17 +20,17 @@ public interface IUserDao {
     List<IUser> findByUser(IUser iUser);
 
     /*
-    添加
+     * 添加
      */
     void addIUser(IUser iUser);
 
     /*
-    修改
+     * 修改
      */
     IUser updateIUser(IUser iUser);
 
     /*
-    删除
+     * 删除
      */
     void deleteIUser(String id);
 }

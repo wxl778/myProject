@@ -9,8 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>myProject-dao</artifactId>
-    <dependencies>
 
+    <dependencies>
+<!--        实体-->
         <dependency>
             <groupId>org.wxl</groupId>
             <artifactId>myProject-domain</artifactId>
